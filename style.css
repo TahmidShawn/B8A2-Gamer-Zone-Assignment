@@ -7,6 +7,7 @@
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 /* common styles  */
@@ -199,12 +200,46 @@ nav {
 
 }
 
-.card:hover img {
-    border: 3px solid #F948B2;
-    border-radius: 15px;
-    border-radius: 16px;
+
+.image {
+    width: 240px;
+    position: relative;
+}
+
+.image_img {
+    display: block;
+    width: 100%;
+}
+
+
+.image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    border: 2px solid #F948B2;
+    color: #F948B2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .25s;
 
 }
+
+.image_overlay:hover {
+    opacity: 1;
+}
+
+
+.image_title {
+    cursor: pointer;
+}
+
 
 .card img {
     width: 240px;
@@ -319,7 +354,7 @@ nav {
 }
 
 
-
+/* footer styles  */
 
 footer {
     width: 100%;
@@ -376,14 +411,7 @@ footer span {
 
 
 
-
-
-
-
-
-
-
-
+/* responsive for mobile devices  */
 
 
 @media screen and (max-width:576px) {
@@ -503,7 +531,7 @@ footer span {
 
     .item:hover {
         border: 1px solid #F948B2;
-        padding: 0 25px;
+        padding: 20px 55px;
     }
 
     .item:hover p {
@@ -538,7 +566,7 @@ footer span {
 
 
 
-
+/* responsive for tab devices  */
 
 
 @media screen and (min-width:577px) and (max-width:960px) {
